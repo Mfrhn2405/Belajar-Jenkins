@@ -1,79 +1,28 @@
-<?php
-// PHP Sederhana untuk menangani form submission (opsional)
-$error = '';
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    if ($username === 'admin' && $password === '12345') {
-        header('Location: welcome.php');
-        exit();
-    } else {
-        $error = 'Username atau Password salah.';
-    }
-}
-?>
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Sederhana dengan Bootstrap</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
-    <style>
-        /* CSS Tambahan untuk membuat Card berada di tengah */
-        body {
-            background-color: #f8f9fa; /* Warna latar belakang ringan */
-        }
-        .login-container {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
+    <title>Latihan Jenkins</title>
 </head>
 <body>
 
-<div class="login-container">
-    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
-        
-        <div class="card shadow-lg p-3">
-            <div class="card-body">
-                <h3 class="card-title text-center mb-4 text-primary">🔐 Halaman Login</h3>
+        <h1>Pertemuan 14</h1>
+        <h2><u>Keamanan Sistem Informasi</u></h2>
 
-                <?php if ($error): ?>
-                    <div class="alert alert-danger" role="alert">
-                        <?php echo $error; ?>
-                    </div>
-                <?php endif; ?>
+    <?php
 
-                <form method="POST" action="index.php">
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
-                    </div>
-                    
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-primary btn-lg">Login</button>
-                    </div>
+    echo "Hello, Perkenallkan Saya <b>Muhammad Farhan</b>!<br>";
+    echo "NPM : <font color =red><b> 23753106 </b></font><br>";
+    echo "Saya Jurusan <b> <i>TEKNOLOGI INFORMASI </b></i> <br>";
 
-                    <div class="text-center mt-3">
-                        <a href="#" class="text-decoration-none">Lupa Password?</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-        
-    </div>
-</div>
+    $alamat = "<b> Jl. Untung suropati No.15 </b>";
+    $umur = "<b> 20 Tahun </b>";
+    
+    echo "alamat : $alamat <br>";
+    echo "umur : $umur <br>";
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    ?>
+
 </body>
 </html>
